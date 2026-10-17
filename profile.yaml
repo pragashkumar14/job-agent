@@ -1,0 +1,155 @@
+# Candidate profile — the matching basis for the agent.
+# Keep contact details out of this file; they live in .env (see .env.example).
+# Everything here is safe to commit and to show as portfolio work.
+
+identity:
+  display_name: "Rajendra Pragash Kumaravel"
+  short_name: "Pragash Kumaravel"
+  base: "Mitry-Mory (77290), Île-de-France"
+  languages: ["French (fluent)", "English (fluent)", "Tamil", "Sinhala"]
+  mobility: "Driving licence + own car"
+
+targets:
+  titles:
+    - "Associate Cloud Engineer"
+    - "Cloud Operations Engineer"
+    - "Cloud Support Engineer"
+    - "Junior DevOps Engineer"
+    - "Junior SRE"
+    - "Linux Systems Administrator"
+    - "Platform Engineer"
+    - "IT Operations Engineer"
+  # Most realistic near-term entry points — weight these higher.
+  priority_titles:
+    - "Cloud Support Engineer"
+    - "IT Operations Engineer"
+    - "Linux Systems Administrator"
+  locations:
+    - "Île-de-France"
+    - "Oise"
+  remote_ok: true
+  hybrid_ok: true
+  # Do NOT filter out roles on commute distance. >45 min is acceptable.
+  max_commute_minutes: null
+  min_salary_eur: 30000
+  contract_types: ["CDI", "CDD", "Alternance"]
+  # Also actively looking for an alternance employer (Ironhack DevOps & Cloud
+  # Computing programme — proposal received, not yet enrolled).
+  alternance_search_active: true
+
+# A second, parallel track. Pragash is applying to operations/admin roles
+# alongside the cloud transition — these use his existing 10+ years directly
+# and pay now, rather than requiring the career change to land first.
+# The agent searches and scores BOTH tracks and labels which is which.
+secondary_track:
+  label: "Operations / ADV / admin"
+  active: true
+  titles:
+    - "Gestionnaire ADV (administration des ventes)"
+    - "Assistant ADV"
+    - "Gestionnaire de commandes"
+    - "Coordinateur logistique"
+    - "Gestionnaire administratif"
+    - "Customer Service Manager"
+    - "Responsable service client"
+    - "Chargé de clientèle / support client"
+    - "Superviseur / Team Leader opérations"
+  # Strongest fit where the sector matches his CNH background.
+  preferred_sectors:
+    - "Automotive"
+    - "Trucks and commercial vehicles"
+    - "Agricultural equipment"
+    - "Aeronautics and defence"
+  notes: >
+    Score these on the operations and escalation-management experience, not on
+    cloud skills. Ten years of team leadership, SLA-bound incident handling,
+    order and stock management, and multilingual stakeholder work is the
+    relevant evidence here. A posting that wants an ADV with automotive or
+    aeronautics exposure is a strong match, not a fallback.
+
+sectors_of_interest:
+  # Prior employer context makes these a natural fit — surface them.
+  sectors:
+    - "Automotive"
+    - "Trucks and commercial vehicles"
+    - "Agricultural equipment"
+    - "Aeronautics and defence"
+    - "Logistics and e-commerce operations"
+  example_employers:
+    - "CNH competitors and peers"
+    - "Tesla"
+    - "BYD"
+    - "Safran"
+
+experience:
+  summary: >
+    10+ years in operations and escalation management, most recently Team Leader
+    at CNH Industrial. Earlier: stock management (gestionnaire de stock) and order
+    handling at Vente Privée / Veepee, 2016–2019.
+  transferable_strengths:
+    - "Incident and escalation management — maps directly to on-call and SRE work"
+    - "Team leadership and cross-functional coordination"
+    - "Process ownership and operational rigour under SLA pressure"
+    - "Multilingual stakeholder communication"
+  leadership:
+    - "President of CTCC Cricket Club since 2019 (captain from 2016) — runs
+       fixtures, travel, budget and events end to end"
+
+training:
+  # Naming matters: call it a Course, never a bootcamp.
+  - name: "Cloud Engineering Course — Ironhack Paris"
+    dates: "April 2026 – September 2026"
+    hours: "400+ (including pre-work)"
+    completed: "2026-09-17"
+
+certifications:
+  held: []
+  # IMPORTANT: none of these are obtained yet. Never state as held.
+  # Always render as "en préparation" / "in preparation", or omit.
+  in_preparation:
+    - "AWS Certified Cloud Practitioner"
+    - "Google Cloud Digital Leader"
+  planned_sequence:
+    - "AWS Certified Cloud Practitioner"
+    - "Google Cloud Digital Leader"
+    - "FinOps Certified Practitioner"
+
+skills:
+  cloud: ["AWS", "GCP (foundational)", "FinOps / cloud cost optimisation"]
+  platform: ["Linux", "Terraform", "Docker", "CI/CD", "Git"]
+  scripting: ["Bash", "Python"]
+
+longer_term:
+  - "Freelance consultancy bridging early-stage startups and cloud providers,
+     focused on cost optimisation (rightsizing, pricing model selection,
+     startup credit programmes)"
+
+# Hard rules the agent must respect when scoring and drafting.
+# Hard gates. A posting that requires any of these is NOT a match, however
+# well the rest of it fits. French postings mark them with "exigé",
+# "impératif", "indispensable", "critère éliminatoire", "obligatoire".
+hard_limits:
+  languages_spoken: ["French", "English", "Tamil", "Sinhala"]
+  # Any OTHER language required at courant/bilingue level is an automatic skip.
+  # German, Spanish, Italian, Dutch, Mandarin etc. are NOT spoken.
+  certifications_held: []
+  # No professional certification is held yet. A posting that REQUIRES a
+  # named certification (AWS, Azure, GCP, ITIL, PMP, CISSP, Prince2, SAP
+  # module certs, customs/déclarant certification) is an automatic skip.
+  # "souhaité", "apprécié", "un plus" is fine — that is a preference.
+  no_deep_expertise_in:
+    - "CREDOC / crédits documentaires (exposure only, not expertise)"
+    - "SAP or Infor M3 as a named, mastered ERP"
+    - "Salesforce specifically (other CRMs yes)"
+  no_formal_degree_above: "Bac+2 equivalent (two London diplomas)"
+  # A posting demanding Bac+5 / ingénieur / master as a stated requirement
+  # is an automatic skip.
+
+constraints:
+  never_claim:
+    - "AWS Certified Cloud Practitioner as held"
+    - "Google Cloud Digital Leader as held"
+    - "Any skill that cannot be credibly defended in an interview"
+  never_call_training: "bootcamp"
+  reply_language: "en"      # Claude talks to Pragash in English
+  default_draft_language: "fr"  # deliverables default to French
