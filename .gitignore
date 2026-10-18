@@ -3,3 +3,9 @@ data/
 __pycache__/
 *.pyc
 .venv/
+build/
+out.json
+infra/.terraform/
+infra/*.tfstate
+infra/*.tfstate.*
+infra/*.tfvars
